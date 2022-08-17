@@ -1,0 +1,82 @@
+:root {
+    color: white;
+}
+
+body {
+    margin: 0;
+    background: black;
+}
+
+.media-container {
+    position: relative;
+}
+
+.media-scroller,
+.media-group {
+    display: grid;
+    grid-auto-flow: column;
+    gap: .25rem
+}
+
+.media-scroller {
+    grid-auto-columns: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.media-group {
+    grid-auto-columns: 1fr;
+}
+
+.media-group > img { 
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+/* next previous */
+.media-scroller:hover :where(.next, .previous) {
+    opacity: 1;
+}
+
+.next,
+.previous {
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    align-items: center;
+
+    padding: 0 1.2rem;
+    width: 1rem;
+    background: rgb(0 0 0 / 0.2);
+    opacity: 0;
+}
+
+.media-group:target :where(.next, .previous) {
+    display: flex;
+}
+
+.media-group:first-child > .next {
+    display: flex;
+}
+
+.next {
+    right: 0;
+}
+
+.previous {
+    left: 0;
+}
+
+:where(.next, .previous) > svg {
+    display: block;
+    width: inherit;
+    height: inherit;
+
+    transition: transform 150ms linear;
+    transform: scale(1)l
+}
+
+:where(.next, .previous):hover > svg {
+    transform: scale(1.5);
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <h1>Netflex</h1>
+    <div class="media-container">
+        <div class="media-scroller">
+            <div id="media-group-1" class="media-group">
+                <img src="https://placem.at/thing?h=100&txt=01&random=01">
+                <img src="https://placem.at/thing?h=100&txt=02&random=02">
+                <img src="https://placem.at/thing?h=100&txt=03&random=03">
+                <img src="https://placem.at/thing?h=100&txt=04&random=04">
+                <a class="next" href="#media-group-2">
+                    <svg>
+                        <use href="#next">
+                    </svg>
+                </a>
+            </div>
+            <div id="media-group-2" class="media-group">
+                <a class="previous" href="#media-group-1">
+                    <svg>
+                        <use href="#previous">
+                    </svg>
+                </a>
+                <img src="https://placem.at/thing?h=100&txt=05&random=05">
+                <img src="https://placem.at/thing?h=100&txt=06&random=06">
+                <img src="https://placem.at/thing?h=100&txt=07&random=07">
+                <img src="https://placem.at/thing?h=100&txt=08&random=08">
+                <a class="next" href="#media-group-3">
+                    <svg>
+                        <use href="#next">
+                    </svg>
+                </a>
+            </div>
+            <div id="media-group-3" class="media-group">
+                <a class="previous" href="#media-group-2">
+                    <svg>
+                        <use href="#previous">
+                    </svg>
+                </a>
+                <img src="https://placem.at/thing?h=100&txt=09&random=09">
+                <img src="https://placem.at/thing?h=100&txt=10&random=10">
+                <img src="https://placem.at/thing?h=100&txt=11&random=11">
+                <img src="https://placem.at/thing?h=100&txt=12&random=12">
+                <a class="next" href="#media-group-4">
+                    <svg>
+                        <use href="#next">
+                    </svg>
+                </a>
+            </div>
+            <div id="media-group-4" class="media-group">
+                <a class="previous" href="#media-group-3">
+                    <svg>
+                        <use href="#previous">
+                    </svg>
+                </a>
+                <img src="https://placem.at/thing?h=100&txt=13&random=13">
+                <img src="https://placem.at/thing?h=100&txt=14&random=14">
+                <img src="https://placem.at/thing?h=100&txt=15&random=15">
+                <img src="https://placem.at/thing?h=100&txt=16&random=16">
+            </div>
+        </div>
+    </div>
+    
+    <a class="previous" href="#media-group-1">
+        <svg>
+            <use href="#previous">
+        </svg>
+    </a>
+
+    <svg>
+        <symbol id="next" viewBox="0 0 60 100">
+            <path fill="white"
+             d="M10 0 l 50 50 l -50 50 l -10 -10 l 40 -40 l -40 -40 Z">
+        </symbol>
+    </svg>
+
+    <svg>
+        <symbol id="previous" viewBox="0 0 60 100">
+            <path fill="white"
+             d="M50 0 l 10 10 l -40 40 l 40 40 l-10 10 l-50 -50 l 50 -50 Z">
+        </symbol>
+    </svg>
+</body>
+<script src="./index.js"></script>
+</html>
